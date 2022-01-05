@@ -4,23 +4,6 @@ import { fetchUsers, fetchPosts, fetchMessages, fetchLikes } from "./data/provid
 
 const applicationElement = document.querySelector(".giffygram")
 
-const renderHTML = () => {
-    fetchPosts()
-        .then(
-            fetchUsers
-        ).then(
-            fetchMessages
-        ).then(
-            fetchLikes
-        ).then(
-            () => {
-                document.querySelector("#content").innerHTML = GiffyGram()
-            }
-        )
-
-}
-renderHTML()
-
 export const renderApp = () => {
     const user = parseInt(localStorage.getItem("gg_user"))
 
@@ -33,4 +16,23 @@ export const renderApp = () => {
 
 renderApp()
 
-document.addEventListener("dbStateChanged", () => renderApp());
+const renderHTML = () => {
+    fetchUsers()
+        .then(
+            fetchPosts
+        ).then(
+            fetchMessages
+        ).then(
+            fetchLikes
+        ).then(
+            () => {
+                // document.querySelector(".loginform").innerHTML = LoginForm()
+                document.querySelector(".giffygram").innerHTML = GiffyGram()
+            }
+        )
+
+}
+renderHTML()
+
+
+document.addEventListener("dbStateChanged", () => render());
