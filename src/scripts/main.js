@@ -14,7 +14,7 @@ const renderHTML = () => {
             fetchLikes
         ).then(
             () => {
-                mainContainer.innerHTML = GiffyGram()
+                document.querySelector("#content").innerHTML = GiffyGram()
             }
         )
 
