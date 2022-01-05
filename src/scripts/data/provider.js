@@ -14,17 +14,3 @@ const applicationState = {
 }
 
 const API = "http://localhost:8088"
-
-export const fetchUsers = () => {
-    return fetch(`${API}/users`)
-        .then(response => response.json())
-        .then(
-            (users) => {
-                applicationState.users = users
-            }
-        )
-}
-
-export const getUsers = () => {
-    return applicationState.chosenUsers.map(users => ({ ...users }))
-}
