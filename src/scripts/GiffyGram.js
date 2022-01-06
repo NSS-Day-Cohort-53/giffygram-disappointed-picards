@@ -1,11 +1,13 @@
-import { LoginForm } from "./auth/LoginForm.js"
-// import { PostList } from "./feed/PostList.js"
+
+// import { PostList } from "./PostList.js"
 // import { MessageForm } from "./message/MessageForm.js"
 
 export const GiffyGram = () => {
 
     // Show main main UI
-    return `
+    let html = `
     <h1>Giffygram</h1>
+   
     `
+    return html
 }
