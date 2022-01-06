@@ -1,7 +1,3 @@
-// resembles the data access module from previous projects 
-
-// const mainContainer = document.querySelector("#container")
-
 const mainContainer = document.querySelector(".giffygram")
 
 const applicationState = {
@@ -10,7 +6,8 @@ const applicationState = {
         chosenUser: null,
         displayFavorites: false,
         displayMessages: false
-    }
+    },
+    posts: []
 }
 
 const API = "http://localhost:8088"
@@ -58,6 +55,7 @@ export const fetchPosts = () => {
 }
 
 export const getPosts = () => {
+    console.log(applicationState.posts)
     return applicationState.posts.map((post) => ({ ...post }))
 }
 
