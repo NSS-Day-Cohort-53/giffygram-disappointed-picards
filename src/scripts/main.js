@@ -19,4 +19,4 @@ export const renderApp = () => {
 
 renderApp()
 
-document.addEventListener("dbStateChanged", () => renderApp());
+applicationElement.addEventListener("stateChanged", () => renderApp());
