@@ -5,8 +5,9 @@ import { Posts } from "./feed/PostList.js"
 export const GiffyGram = () => {
 
     // Show main main UI
-    return `
+    let html = `
     <h1>Giffygram</h1>
     ${Posts()}
     `
+    return html
 }
