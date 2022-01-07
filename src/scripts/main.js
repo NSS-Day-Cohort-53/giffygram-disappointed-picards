@@ -4,8 +4,8 @@ import { fetchUsers, fetchPosts } from "./data/provider.js"
 
 const applicationElement = document.querySelector(".giffygram")
 
-fetchPosts()
-fetchUsers()
+fetchPosts().then(() => fetchUsers()).then(() => renderApp())
+
 export const renderApp = () => {
 
     const user = parseInt(localStorage.getItem("gg_user"))
@@ -17,6 +17,6 @@ export const renderApp = () => {
     }
 }
 
-renderApp()
+// renderApp()
 
 applicationElement.addEventListener("stateChanged", () => renderApp());
