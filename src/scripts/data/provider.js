@@ -7,7 +7,8 @@ const applicationState = {
         displayFavorites: false,
         displayMessages: false
     },
-    posts: []
+    posts: [],
+    users: []
 }
 
 const API = "http://localhost:8088"
